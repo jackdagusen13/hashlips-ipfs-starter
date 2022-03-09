@@ -266,6 +266,26 @@ const pixelFormat = {
 };
 ```
 
+After generating the images and metadata, you can store the directory to the NFT storage. Sign up and create an API Key. Then create a .env file with
+```sh
+NFT_STORAGE_KEY = "YOUR NFT STORAGE KEY"
+```
+
+You can run store images in the IPFS by running 
+```sh
+node storeDirectory.mjs image
+```
+
+After uploading, you must change the `newUriToReplace` to the CID of the folder containing the images
+```js
+const baseUri = "ipfs://NewUriToReplace";
+```
+
+Json metadata can now be uploaded by running
+```sh
+node storeDirectory.mjs json
+```
+
 ### Generate GIF images from collection
 
 In order to export gifs based on the layers created, you just need to set the export on the `gif` object in the `src/config.js` file to `true`. You can also play around with the `repeat`, `quality` and the `delay` of the exported gif.
