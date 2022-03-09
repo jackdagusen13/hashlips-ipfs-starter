@@ -221,6 +221,31 @@ const extraMetadata = {
 };
 ```
 
+After generating the images and metadata, you can store the directory to the NFT storage. Sign up and create an API Key. Then create a .env file with
+```sh
+NFT_STORAGE_KEY = "YOUR NFT STORAGE KEY"
+```
+
+You can run store images in the IPFS by running 
+```sh
+node storeDirectory.mjs image
+```
+
+After uploading, you must change the `newUriToReplace` to the CID of the folder containing the images.
+```js
+const baseUri = "ipfs://NewUriToReplace";
+```
+
+To update the uri of the json files, run
+```js
+node utils/update_info.js
+```
+
+Json metadata can now be uploaded by running
+```sh
+node storeDirectory.mjs json
+```
+
 If you don't need extra metadata, simply leave the object empty. It is empty by default.
 
 ```js
@@ -266,30 +291,6 @@ const pixelFormat = {
 };
 ```
 
-After generating the images and metadata, you can store the directory to the NFT storage. Sign up and create an API Key. Then create a .env file with
-```sh
-NFT_STORAGE_KEY = "YOUR NFT STORAGE KEY"
-```
-
-You can run store images in the IPFS by running 
-```sh
-node storeDirectory.mjs image
-```
-
-After uploading, you must change the `newUriToReplace` to the CID of the folder containing the images.
-```js
-const baseUri = "ipfs://NewUriToReplace";
-```
-
-To update the uri of the json files, run
-```js
-node utils/update_info.js
-```
-
-Json metadata can now be uploaded by running
-```sh
-node storeDirectory.mjs json
-```
 
 ### Generate GIF images from collection
 
