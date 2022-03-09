@@ -9,7 +9,8 @@ const token = process.env.NFT_STORAGE_KEY
 
 async function main() {
     const path = process.argv.slice(2)
-    const files = await getFilesFromPath(path)
+    console.log(token)
+    const files = await getFilesFromPath(`build/${path}`)
 
     const storage = new NFTStorage({ token })
 
