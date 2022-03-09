@@ -276,9 +276,14 @@ You can run store images in the IPFS by running
 node storeDirectory.mjs image
 ```
 
-After uploading, you must change the `newUriToReplace` to the CID of the folder containing the images
+After uploading, you must change the `newUriToReplace` to the CID of the folder containing the images.
 ```js
 const baseUri = "ipfs://NewUriToReplace";
+```
+
+To update the uri of the json files, run
+```js
+node utils/update_info.js
 ```
 
 Json metadata can now be uploaded by running
