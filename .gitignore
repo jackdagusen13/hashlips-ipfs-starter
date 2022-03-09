@@ -52,7 +52,7 @@ build/Release
 build/
 dist/
 node_modules/
-*/node_modules/
+**/node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
