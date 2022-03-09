@@ -25,7 +25,10 @@
   "license": "MIT",
   "dependencies": {
     "canvas": "^2.8.0",
+    "dotenv": "^16.0.0",
+    "files-from-path": "^0.2.4",
     "gif-encoder-2": "^1.0.5",
+    "nft.storage": "^6.0.2",
     "sha1": "^1.1.1"
   }
 }
